@@ -1,0 +1,156 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background-color: #ffffff;
+	overflow: hidden;
+		
+}
+.mainbody
+{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+}
+
+
+
+.titlebar
+{
+	display: flex;
+	font-size: 20px;
+	justify-content: space-between;
+	font-family: "awanzaman";
+	margin: 10px 80px 0px 80px;
+	align-items: center;
+
+}
+.img{
+	display: flex;
+	z-index: -1;
+	position: absolute;
+	overflow: hidden;
+	justify-content: space-between;
+	opacity: 9%;
+}
+
+.img1
+{
+	padding-right: 200px;
+	padding-bottom: 80px;
+	padding-top: 30px;
+}
+
+.main-content
+{
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	margin: auto;
+	height: 80vh;
+}
+.left-content
+{
+	display: flex;
+	flex-direction: column;
+	width: 40vw;
+	margin: 4% 6%;
+}
+.right-content
+{
+	
+}
+.btn{
+	display: flex;
+}
+.button
+{
+	width:35%;
+	padding: 5px 10px;
+	border-radius: 30px;
+	border: 2px solid #080808;
+	font-size: 25px;
+	background: none;
+	color: #080808;
+	font-family: "awanzaman";
+	font-weight: bold;
+	margin: 20px 20px 20px 0;
+}
+
+.button:hover
+{
+	background-color: #050505;
+	color: #ec5b71;
+}
+
+
+ul{
+	list-style: none;
+}
+
+li
+{
+	text-decoration: none;
+	font-size: 20px;
+	display: inline;
+	font-family: 'Karla', sans-serif;
+	letter-spacing: 1px;
+}
+li a{
+	text-decoration: none;
+	color: rgb(10, 10, 10);
+	padding: 8px 4px;
+	margin: 0px 20px;
+	
+
+	
+}
+
+li a:hover
+{	
+	transform-origin: center;
+	border-bottom: 2px solid #151515;
+
+}
+
+
+.item1 a{
+	text-decoration: none;
+	color: rgb(6, 6, 6);
+	font-family: 'Karla', sans-serif;
+	font-weight: bold;
+}
+
+h1{
+	font-size: 100px;
+	letter-spacing: 0.1cm;
+	font-family: "famosa";
+}
+h2{
+	font-size: 85px;
+	font-family: "tt moons bold";
+	letter-spacing: 0.005cm;
+
+}
+
+h2,h3,p{
+	padding-bottom: 20px;
+}
+
+h1,h2{
+	color: rgb(8, 8, 8);
+}
+h3
+{
+	font-size: 40px;
+	font-family: "awanzaman";
+	font-weight: 600;
+	color: #131313;
+}
+
+p{
+	letter-spacing: 0.03cm;
+}

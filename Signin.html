@@ -1,0 +1,64 @@
+<DOCTYPE html>
+
+	<head>
+		<title>
+			Sign In
+		</title>
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+	</head>
+
+
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<style>
+		.text {
+			padding: 12px;
+			margin-bottom: 15px;
+			border-radius: 5px;
+			width: 20vw;
+			font-size: 15px;
+		}
+
+		div.logo {
+			padding: 0;
+		}
+	</style>
+
+	<body>
+		<div class="container">
+			<div class="logo" style="display: inline;">
+				<a href="/">
+					<img src="/Images/LOGO.png" height="100px">
+				</a><br>
+			</div>
+			<form class="form" name="signForm" style="padding: 20px 30px 40px;" action="/auth"  method="post">
+				<div class=head>
+					<h2> Hi, Welcome back</h2>
+				</div>
+				<div>
+					<p>Email<sup style="color: #ffca70;"><b>*</b></sup></p>
+					<label><input type="Email" name="emails" placeholder="Email Address" class="text box"></label>
+					<p id="emailErr" style="color: #ffca70;"></p>
+				</div>
+
+				<div>
+					<p>Password<sup style="color: #ffca70;"><b>*</b></sup> </p>
+					<label><input type="password" name="pass" placeholder="Password" class="text box">
+					</label>
+					<p id="passErr" style="color: #ffca70;"></p>
+				</div>
+
+				<div class="rememberme-forgot">
+					<label><input type="checkbox" name="remember" class="check">Remember me</label>
+				</div>
+
+				<input type="submit" class="btn" value="Sign in">
+				<br><br>
+				<hr> <br> <br>
+
+				<p style="font-weight: 100;">New to CastMart? </p>
+				<input type="button" class="btn" value="Create your account" onclick="location.href='/create_user'">
+			</form>
+		</div>
+	</body>

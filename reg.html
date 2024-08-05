@@ -1,0 +1,105 @@
+<DOCTYPE html>
+
+    <head>
+        <title>
+            Register
+        </title>
+        <link rel="icon" type="image/x-icon" href="/images/LOGO.png">
+
+    </head>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        .text {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 15px;
+        }
+        .form
+        {
+            width: 20vw;
+            padding: 20px 30px;
+        }
+        .small-text{
+            font-size : small;
+        }
+    </style>
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password");
+            var confirmPassword = document.getElementById("confirmPassword");
+
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity("Passwords do not match");
+            } else {
+                confirmPassword.setCustomValidity("");
+            }
+        }
+    </script>
+
+    <body>
+        <div class="container">
+            <div class="logo">
+                    <a href="/" style="color: #ffca70; font-weight: bold;"><img src="/Images/LOGO.png" height="100px"></a>
+                
+            </div>
+
+            <form class="form" name="regForm" action="/create" method="Post" autocomplete="off">
+
+                <div class=head>
+                    <h2> Create Account </h2> <br>
+                </div>
+
+                <div class="firstlast name">
+                    <p> Your Name<sup style="color: #ffca70;"><b>*</b></sup> </p>
+                    <label><input type="TEXT" id="name" name="name" placeholder="First Name and Last Name"
+                            class="text box"></label>
+                <p id="nameErr" style="color: #ffca70;"></p>
+                </div>
+
+                <p> Email<sup style="color: #ffca70;"><b>*</b></sup> </p>
+                <div class="Email">
+                    <label><input type="text" id="email"  name="email" placeholder="Email Address" class="text box"></label>
+                    <p id="emailErr" style="color: #ffca70;"></p>
+                </div>
+
+                <p> Password<sup style="color: #ffca70;"><b>*</b></sup> </p>
+                <div class="pass">
+                    <label><input type="password" id="password" name="pass" placeholder="at least 8 characters" class="text box" >
+                    </label>
+                    <small class="form-text text-muted small-text">(atleast one uppercase, one special character, one number required)</small>
+                    <br>
+                    <p id="passErr" style="color: #ffca70;"></p>
+                
+                </div>
+
+                <p> Re-enter Password<sup style="color: #ffca70;"><b>*</b></sup> </p>
+                <div class="re pass">
+                    <label><input type="password" id ="checkpass" name="cpass" class="text box" oninput="validatePassword()"></label> <br>
+                    <p id="cpassErr" style="color: #ffca70;"></p>
+                </div> 
+
+                <p> Would you like Email Communications?<sup style="color: #ffca70;"><b>*</b></sup> </p>
+                <div class="email_comm">
+                    <select id="email_comm" name="email_comm">
+                        <option value="Select an Option">Select an option</option>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select> <br>
+                    <p id="cpassErr" style="color: #ffca70;"></p>
+                </div> <br>
+
+                <input type="submit" name="signin" class="text btn" value="Create your account">
+                <br>
+                <hr><br>
+
+                <p style="font-weight: 100;"> Already have an account? <a href="/login"> Sign In.</a></p>
+
+            </form>
+        </div>
+    </body>

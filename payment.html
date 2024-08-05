@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            text-align: center;
+            color: #4caf50;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbody">
+		<div class="titlebar">
+			<div class="item1">
+				<a href="/"><img src="/Images/LOGO.png" height="80px"></a>
+				
+			</div>
+    <form id="paymentForm" onsubmit="handlePayment(event)">
+        <label for="cardName">Card Name:</label>
+        <input type="text" id="cardName" name="cardName" required>
+
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" required>
+
+        <label for="expiryMonth">Expiry Month:</label>
+        <input type="text" id="expiryMonth" name="expiryMonth" pattern="\d{2}" placeholder="MM" required>
+
+        <label for="expiryYear">Expiry Year:</label>
+        <input type="text" id="expiryYear" name="expiryYear" pattern="\d{4}" placeholder="YYYY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="password" id="cvv" name="cvv" pattern="\d{3}" required>
+
+        <div class="button-container">
+            <button type="submit">Pay Now</button>
+        </div>
+    </form>
+
+    <div id="successMessage" class="success-message" style="display:none;">
+        <p>Thank you for completing the payment!<br>Invoice and Delivery Details has been sent to your mail id. <br><br>Rest Assure!We are not a scammer. For the time.</p>
+    </div>
+
+    <script>
+        function handlePayment(event) {
+            event.preventDefault();
+            // Perform server-side validation and payment processing here
+            // For the example, we'll just show the success message
+            document.getElementById('paymentForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+        }
+        function handlePayment(event) {
+        event.preventDefault();
+        // Perform server-side validation and payment processing here
+        // For the example, we'll just show the success message
+        document.getElementById('paymentForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+
+        // Schedule a timer to redirect after 5 seconds
+        setTimeout(function () {
+            window.location.href = '/';
+        }, 5000);
+    }
+    </script>
+</body>
+
+</html>
